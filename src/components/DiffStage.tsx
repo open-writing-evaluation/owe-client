@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { CardContent, CardActions, Button, Stack, Container, CircularProgress } from '@mui/material';
+import { CardContent, CardActions, Button, Stack, Container, CircularProgress, Typography } from '@mui/material';
 
 import CombinedDiffDisplay from './CombinedDiffDisplay';
 import Scoreboard from './Scoreboard';
@@ -13,6 +13,7 @@ type DiffStageProps = {
 
 export default function DiffStage(props: DiffStageProps) {
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
     const [resultText, setResultText] = useState('');
     const [scores, setScores] = useState([]);
 
@@ -23,7 +24,10 @@ export default function DiffStage(props: DiffStageProps) {
                 setScores(res['scores']);
                 setLoading(false);
             })
-            .catch((err) => console.log(err));
+            .catch((err) => {
+                setLoading(false);
+                setError(true);
+            });
     }, []);
 
     if (loading) {
@@ -33,6 +37,29 @@ export default function DiffStage(props: DiffStageProps) {
                     <CircularProgress />
                 </Container>
             </CardContent>
+        );
+    }
+
+    if (error) {
+        return (
+            <div>
+                <CardContent>
+                    <Typography>
+                        An error has occured. Please try again.
+                    </Typography>
+                </CardContent>
+                <CardActions
+                    sx={{ display: "flex", justifyContent: "end" }}
+                >
+
+                    <Button
+                        variant="outlined"
+                        onClick={props.setStage}
+                    >
+                        Back
+                    </Button>
+                </CardActions>
+            </div>
         );
     }
 

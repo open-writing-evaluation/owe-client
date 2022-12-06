@@ -18,23 +18,18 @@ export async function helloWorld() {
 }
 
 export async function hardCodedResult() {
-    try {
-        const { data, status } = await axios.get(
-            'http://127.0.0.1:8000/hardcoded/',
-            {
-                headers: {
-                    Accept: "application/json",
-                },
+    const { data, status } = await axios.get(
+        'http://127.0.0.1:8000/hardcoded/',
+        {
+            headers: {
+                Accept: "application/json",
             },
-        );
+        },
+    );
 
-        console.log(status);
+    console.log(status);
 
-        return data;
-    } catch (error) {
-        console.log(error);
-        return {};
-    }
+    return data;
 }
 
 export async function GECresult(input: string) {
