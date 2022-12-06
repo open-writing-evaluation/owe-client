@@ -1,15 +1,25 @@
+import { useState } from 'react';
 import NavBar from './components/NavBar';
 import MainCard from './components/MainCard';
+import Sidebar from './components/Sidebar';
 import { Container, Typography } from '@mui/material';
 
-import { helloWorld } from './utils/request_utils';
-
 function App() {
-  helloWorld();
-  
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  }
+  const [language, setLanguage] = useState("English");
+  const selectLanguage = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setLanguage(event.target.value);
+  }
+
   return (
     <div>
-      <NavBar />
+      <NavBar 
+        toggleDrawer={toggleDrawer}
+        language={language}
+      />
       <Container sx={{ mt: 5}}>
         {/* <Typography
           align="center"
@@ -23,8 +33,21 @@ function App() {
         >
           Multilingual Automated Writing Evaluation with Corrective Feedback
         </Typography>
+        {/* <Typography
+          align="center"
+          variant="body2"
+          sx={{ mt: 5}}
+        >
+          Model: English
+        </Typography> */}
         <MainCard />
       </Container>
+      <Sidebar 
+        open={drawerOpen}
+        onClick={toggleDrawer}
+        setLanguage={selectLanguage}
+        defaultValue={language}
+      />
     </div>
   );
 }

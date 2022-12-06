@@ -2,7 +2,12 @@ import React from 'react';
 import { AppBar, IconButton, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
-export default function NavBar() {
+type NavBarProps = {
+    toggleDrawer: () => void,
+    language: string,
+};
+
+export default function NavBar(props: NavBarProps) {
     return (
         <AppBar position="static">
             <Toolbar>
@@ -12,6 +17,7 @@ export default function NavBar() {
                     color="inherit"
                     aria-label="menu"
                     sx={{ mr: 1 }}
+                    onClick={props.toggleDrawer}
                 >
                     <MenuIcon />
                 </IconButton>
@@ -21,6 +27,11 @@ export default function NavBar() {
                     sx={{ flexGrow: 1 }}
                 >
                     Open Writing Evaluation
+                </Typography>
+                <Typography
+                    variant="overline"
+                >
+                    {props.language}
                 </Typography>
             </Toolbar>
       </AppBar>
