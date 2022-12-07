@@ -3,7 +3,7 @@ import axios from "axios";
 export async function helloWorld() {
     try {
         const { data, status } = await axios.get(
-            'http://127.0.0.1:8000/test',
+            'https://127.0.0.1:8000/test',
             {
                 headers: {
                     Accept: "application/json",
@@ -20,10 +20,11 @@ export async function helloWorld() {
 
 export async function hardCodedResult() {
     const { data, status } = await axios.get(
-        `http://${process.env.REACT_APP_SERVER_IP}:8000/hardcoded/`,
+        `https://${process.env.REACT_APP_SERVER_IP}:8000/hardcoded/`,
         {
             headers: {
                 Accept: "application/json",
+                "Access-Control-Allow-Origin": '*',
             },
         },
     );
@@ -36,7 +37,7 @@ export async function hardCodedResult() {
 export async function GECresult(input: string) {
     try {
         const { data, status } = await axios.get(
-            `http://127.0.0.1:8000/gec/${input}`,
+            `https://127.0.0.1:8000/gec/${input}`,
             {
                 headers: {
                     Accept: "application/json",
