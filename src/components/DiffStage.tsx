@@ -4,7 +4,7 @@ import { CardContent, CardActions, Button, Stack, Container, CircularProgress, T
 
 import CombinedDiffDisplay from './CombinedDiffDisplay';
 import Scoreboard from './Scoreboard';
-import { GECresult, hardCodedResult } from '../utils/request_utils';
+import { hardCodedResult } from '../utils/request_utils';
 
 type DiffStageProps = {
     inputText: string,

@@ -48,6 +48,8 @@ export default function CombinedDiffDisplay(props: CombinedDiffDisplayProps) {
                                 </Grid>
                             );
                         }
+                    } else {
+                        return <>;</>
                     }
                 })}
             </Grid>

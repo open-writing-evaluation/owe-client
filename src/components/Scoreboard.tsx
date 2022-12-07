@@ -1,6 +1,6 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
-import { Paper, Typography, Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material';
+import { Paper, Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material';
 
 type ScoreboardProps = {
     scores: Array<string>,

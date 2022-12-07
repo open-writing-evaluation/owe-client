@@ -11,7 +11,8 @@ export async function helloWorld() {
             },
         );
 
-        console.log(JSON.stringify(data, null, 4));
+        console.log(data);
+        console.log(status);
     } catch (error) {
         console.log(error);
     }

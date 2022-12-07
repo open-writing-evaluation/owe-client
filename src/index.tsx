@@ -23,14 +23,14 @@ const darkTheme = createTheme({
   },
 });
 
-const instructorTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    background: {
-      default: "#373d3d",
-    }
-  }
-});
+// const instructorTheme = createTheme({
+//   palette: {
+//     mode: 'dark',
+//     background: {
+//       default: "#373d3d",
+//     }
+//   }
+// });
 
 root.render(
   <React.StrictMode>
