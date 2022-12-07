@@ -1,6 +1,7 @@
 {
   "name": "owe_client",
   "version": "0.1.0",
+  "homepage": "https://openwritingevaluation.github.io",
   "private": true,
   "dependencies": {
     "@fontsource/roboto": "^4.5.8",
@@ -22,6 +23,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -49,6 +52,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.10.14",
-    "@types/diff": "^5.0.2"
+    "@types/diff": "^5.0.2",
+    "gh-pages": "^4.0.0"
   }
 }
