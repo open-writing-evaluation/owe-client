@@ -1,7 +1,7 @@
 {
   "name": "owe_client",
   "version": "0.1.0",
-  "homepage": "https://openwritingevaluation.github.io",
+  "homepage": "https://open-writing-evaluation.github.io/awe/",
   "private": true,
   "dependencies": {
     "@fontsource/roboto": "^4.5.8",
