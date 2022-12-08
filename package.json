@@ -1,7 +1,7 @@
 {
   "name": "owe_client",
   "version": "0.1.0",
-  "homepage": "https://open-writing-evaluation.netlify.app/",
+  "homepage": "https://open-writing-evaluation.github.io/awe/",
   "private": true,
   "dependencies": {
     "@fontsource/roboto": "^4.5.8",
@@ -22,6 +22,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -b web",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
