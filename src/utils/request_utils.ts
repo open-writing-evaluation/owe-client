@@ -20,7 +20,7 @@ export async function helloWorld() {
 
 export async function hardCodedResult() {
     const { data, status } = await axios.get(
-        `https://${process.env.REACT_APP_SERVER_IP}:8000/hardcoded/`,
+        `http://${process.env.REACT_APP_SERVER_IP}/hardcoded/`,
         {
             headers: {
                 Accept: "application/json",
