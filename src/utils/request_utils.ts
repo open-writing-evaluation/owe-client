@@ -35,16 +35,16 @@ export async function hardCodedResult() {
 
 export async function GECresult(input: string) {
     try {
+        // const data = await fetch(`http://52.39.197.72:8000/gec?text=${input}`);
+        // console.log(data)
         const { data, status } = await axios.get(
-            `https://127.0.0.1:8000/gec/${input}`,
+            `http://52.39.197.72:8000/gec?text=${input}`,
             {
                 headers: {
                     Accept: "application/json",
                 },
             },
         );
-
-        console.log(status);
 
         return data;
     } catch (error) {

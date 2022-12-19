@@ -4,7 +4,7 @@ import { CardContent, CardActions, Button, Stack, Container, CircularProgress, T
 
 import CombinedDiffDisplay from './CombinedDiffDisplay';
 import Scoreboard from './Scoreboard';
-import { hardCodedResult } from '../utils/request_utils';
+import { hardCodedResult, GECresult } from '../utils/request_utils';
 
 type DiffStageProps = {
     inputText: string,
@@ -18,7 +18,7 @@ export default function DiffStage(props: DiffStageProps) {
     const [scores, setScores] = useState([]);
 
     useEffect(() => {
-        hardCodedResult()
+        GECresult(props.inputText)
             .then((res) => {
                 setResultText(res['corrected']);
                 setScores(res['scores']);
