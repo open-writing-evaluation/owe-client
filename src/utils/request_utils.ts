@@ -36,7 +36,7 @@ export async function hardCodedResult() {
 export async function GECresult(input: string) {
     try {
         const { data, status } = await axios.get(
-            `https://open-writing-evaluation.org/gec?text=${input}`,
+            `https://gec.makemycodefast.com/gec?text=${input}`,
             {
                 headers: {
                     Accept: "application/json",
