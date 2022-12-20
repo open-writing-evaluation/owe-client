@@ -35,14 +35,8 @@ export async function hardCodedResult() {
 
 export async function GECresult(input: string) {
     try {
-        const { data, status } = await axios.get(
-            `https://gec.makemycodefast.com/gec?text=${input}`,
-            {
-                headers: {
-                    Accept: "application/json",
-                },
-            },
-        );
+        const res: any = await fetch(`https://gec.makemycodefast.com/gec?text=${encodeURI(input)}`);
+        const data: any = await res.json();
 
         return data;
     } catch (error) {
