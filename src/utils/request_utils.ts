@@ -38,6 +38,13 @@ export async function GECresult(input: string) {
         const res: any = await fetch(`https://gec.makemycodefast.com/gec?text=${encodeURI(input)}`);
         const data: any = await res.json();
 
+        // const res: any = await fetch(`https://gec.makemycodefast.com/text`, {
+        //     method: "POST",
+        //     headers: { "Content-Type": "text/plain" },
+        //     body: input,
+        // });
+        // const data: any = await res.json();
+
         return data;
     } catch (error) {
         console.log(error);
