@@ -68,7 +68,7 @@ export default function DiffStage(props: DiffStageProps) {
             <CardContent
                 sx={{display: "flex", justifyContent: "center"}}
             >
-                <Stack direction="column" spacing={1}>
+                <Stack direction="column" spacing={1} sx={{width: "100%"}}>
                     <Stack direction="row" spacing={1}>
                         <CombinedDiffDisplay 
                             inputText={props.inputText}

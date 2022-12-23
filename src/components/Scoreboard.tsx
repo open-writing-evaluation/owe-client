@@ -12,7 +12,7 @@ export default function Scoreboard(props: ScoreboardProps) {
     });
 
     return (
-        <Paper elevation={2} sx={{padding: 1}}>
+        <Paper elevation={2} sx={{padding: 1, overflow: "auto"}}>
             <Table>
                 <TableHead>
                     <TableRow>
