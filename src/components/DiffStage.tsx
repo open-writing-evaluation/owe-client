@@ -75,9 +75,9 @@ export default function DiffStage(props: DiffStageProps) {
                             correctedText={resultText}
                         />
                     </Stack>
-                    <Scoreboard 
+                    {/* <Scoreboard 
                         scores={scores}
-                    />
+                    /> */}
                 </Stack>
             </CardContent>
             <CardActions
