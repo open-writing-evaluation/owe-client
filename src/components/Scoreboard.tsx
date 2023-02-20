@@ -29,15 +29,6 @@ export default function Scoreboard(props: ScoreboardProps) {
                 </TableHead>
                 <TableBody>
                     <TableRow>
-                        {/* <TableCell align='center'>12</TableCell>
-                        <TableCell align='center'>1</TableCell>
-                        <TableCell align='center'>2</TableCell>
-                        <TableCell align='center'>17</TableCell>
-                        <TableCell align='center'>10</TableCell>
-                        <TableCell align='center'>1</TableCell>
-                        <TableCell align='center'>16</TableCell>
-                        <TableCell align='center'>20</TableCell>
-                        <TableCell align='center'>33</TableCell> */}
                         {scores}
                     </TableRow>
                 </TableBody>

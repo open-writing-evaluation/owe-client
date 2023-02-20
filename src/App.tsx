@@ -31,7 +31,7 @@ function App() {
           align="center"
           variant="h5"
         >
-          Multilingual Automated Writing Evaluation with Corrective Feedback
+          Write It Right: Automated Writing Evaluation with Corrective Feedback
         </Typography>
         {/* <Typography
           align="center"
