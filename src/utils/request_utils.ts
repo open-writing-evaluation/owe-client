@@ -35,7 +35,7 @@ export async function hardCodedResult() {
 
 export async function GECresult(input: string) {
     try {
-        const res: any = await fetch(`https://gec.makemycodefast.com/gec?text=${encodeURI(input)}`);
+        const res: any = await fetch(`https://gecgpu.makemycodefast.com/gec?text=${encodeURI(input)}`);
         const data: any = await res.json();
 
         // const res: any = await fetch(`https://gec.makemycodefast.com/text`, {
